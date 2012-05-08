@@ -4,6 +4,7 @@ Simple parse
   Lower case
   Ignore white spaces
   Trim text
+  Make it works with accentuation
   
 Parse using a dictionary
   Check if the dictionary is provided
@@ -20,3 +21,5 @@ Test many white spaces
 Test some characters such as 'ç, ã, é'
 
 Provide minimum and maximum lenght
+
+Improve the sort code
