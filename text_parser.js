@@ -1,15 +1,15 @@
 exports.parse = function(text, args) {
   var result = [];
   text = prepare_text(text);
-  var splited_text = text.split(' ');
-  for (var item in splited_text) {
-    if (splited_text[item] == '') continue;
-    var item_index = find_in_array(result, splited_text[item]);
-    if (item_index == null) {
-      result.push({'word': splited_text[item], 'hits': 1});
-    }
-    else {
-      result[item_index]['hits'] += 1;
+  var dictionary = process_dictionary(text, args);
+  for (var item in dictionary) {
+    if (dictionary[item] == '') continue;
+    var matches = match_text(text, dictionary[item]);
+    if (matches != null) {
+      var item_index = find_in_array(result, dictionary[item]);
+      if (item_index == null) {
+        result.push({'word': dictionary[item], 'hits': matches.length});
+      }
     }
   }
   return result;
@@ -26,4 +26,14 @@ function prepare_text(text) {
   text = text.replace(/[^\w\s]/gi,' ')
   text = text.replace(/^\s+|\s+$/g,"");
   return text.toLowerCase();
+}
+
+function process_dictionary(text, args) {
+  if (args['dictionary'] == undefined) return text.split(' ');
+  return args['dictionary'];
+}
+
+function match_text(text, word) {
+  var r = new RegExp('\\b' + word + '\\b', 'g');
+  return text.match(r);
 }
