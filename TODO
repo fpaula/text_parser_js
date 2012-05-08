@@ -1,0 +1,22 @@
+Simple parse
+  Split with space
+  Remove special characters
+  Lower case
+  Ignore white spaces
+  Trim text
+  
+Parse using a dictionary
+  Check if the dictionary is provided
+  Ignore words those are not in the dictionary
+  
+Parse using a negative dictionary
+
+Order result
+  By hits
+  By words
+  
+Test hifen
+Test many white spaces
+Test some characters such as 'ç, ã, é'
+
+Provide minimum and maximum lenght
