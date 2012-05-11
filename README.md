@@ -1,4 +1,4 @@
-!https://secure.travis-ci.org/fpaula/text_parser_js.png!":http://travis-ci.org/fpaula/text_parser_js
+![Travis](https://secure.travis-ci.org/fpaula/text_parser_js.png)
 
 parse(text, args)
  
