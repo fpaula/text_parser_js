@@ -1,14 +1,14 @@
 {
     "name": "text_parser",
     "description": "Simple text parser",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Frederico de Paula",
     "repository": {
         "type": "git",
         "url": "http://github.com/fpaula/text_parser_js"
     },
-    "engines": {
-        "node": ">=0.6.15"
-    },
+    "scripts": {
+        "test": "node test/text_parser_test.js"
+    }, 
     "main": "text_parser"
 }
